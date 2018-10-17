@@ -1,0 +1,1733 @@
+{
+  "contractName": "HashCommit",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "masterHash",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xff4417d5"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "signature": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "hash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "newMasterHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "Hash",
+      "type": "event",
+      "signature": "0x1c6c6ff40a06be56705d4004ffbea3dbcf350ad4b2d9872ffadf91b5e39b5a6e"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event",
+      "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "hash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "updateHash",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x438114d0"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "hashAlgo",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xbae1d762"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x893d20e8"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xf2fde38b"
+    }
+  ],
+  "bytecode": "0x6080604052600060010260019060001916905534801561001e57600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506105178061006e6000396000f30060806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063438114d014610072578063893d20e8146100a3578063bae1d762146100fa578063f2fde38b1461018a578063ff4417d5146101cd575b600080fd5b34801561007e57600080fd5b506100a16004803603810190808035600019169060200190929190505050610200565b005b3480156100af57600080fd5b506100b86102e9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010657600080fd5b5061010f6102f8565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561014f578082015181840152602081019050610134565b50505050905090810190601f16801561017c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561019657600080fd5b506101cb600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061035b565b005b3480156101d957600080fd5b506101e2610367565b60405180826000191660001916815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561025b57600080fd5b806001546040518083600019166000191681526020018260001916600019168152602001925050506040518091039020600181600019169055507f1c6c6ff40a06be56705d4004ffbea3dbcf350ad4b2d9872ffadf91b5e39b5a6e8160015460405180836000191660001916815260200182600019166000191681526020019250505060405180910390a150565b60006102f361036d565b905090565b60608060405190810160405280603181526020017f2f2f206a730a20776562332e7574696c732e736f6c696469747953686133286881526020017f6173682c206d617374657248617368293b000000000000000000000000000000815250905090565b61036481610396565b50565b60015481565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156103f157600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561042d57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058202f0f3f20602ab6da81b800586dc44c81ab397d011acc9d8feefacd8fef29e6d10029",
+  "deployedBytecode": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063438114d014610072578063893d20e8146100a3578063bae1d762146100fa578063f2fde38b1461018a578063ff4417d5146101cd575b600080fd5b34801561007e57600080fd5b506100a16004803603810190808035600019169060200190929190505050610200565b005b3480156100af57600080fd5b506100b86102e9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010657600080fd5b5061010f6102f8565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561014f578082015181840152602081019050610134565b50505050905090810190601f16801561017c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561019657600080fd5b506101cb600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061035b565b005b3480156101d957600080fd5b506101e2610367565b60405180826000191660001916815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561025b57600080fd5b806001546040518083600019166000191681526020018260001916600019168152602001925050506040518091039020600181600019169055507f1c6c6ff40a06be56705d4004ffbea3dbcf350ad4b2d9872ffadf91b5e39b5a6e8160015460405180836000191660001916815260200182600019166000191681526020019250505060405180910390a150565b60006102f361036d565b905090565b60608060405190810160405280603181526020017f2f2f206a730a20776562332e7574696c732e736f6c696469747953686133286881526020017f6173682c206d617374657248617368293b000000000000000000000000000000815250905090565b61036481610396565b50565b60015481565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156103f157600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561042d57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058202f0f3f20602ab6da81b800586dc44c81ab397d011acc9d8feefacd8fef29e6d10029",
+  "sourceMap": "51:606:0:-;;;204:3;176:31;;;;;;;;;86:34;8:9:-1;5:2;;;30:1;27;20:12;5:2;86:34:0;746:10:2;738:5;;:18;;;;;;;;;;;;;;;;;;51:606:0;;;;;;",
+  "deployedSourceMap": "51:606:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;212:130;;8:9:-1;5:2;;;30:1;27;20:12;5:2;212:130:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;485:73;;8:9:-1;5:2;;;30:1;27;20:12;5:2;485:73:0;;;;;;;;;;;;;;;;;;;;;;;;;;;346:112;;8:9:-1;5:2;;;30:1;27;20:12;5:2;346:112:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;346:112:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;562:92;;8:9:-1;5:2;;;30:1;27;20:12;5:2;562:92:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;176:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;176:31:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;212:130;890:5:2;;;;;;;;;;;876:19;;:10;:19;;;868:28;;;;;;;;287:4:0;293:10;;282:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;269:10;:35;;;;;;;315:22;320:4;326:10;;315:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;212:130;:::o;485:73::-;526:7;544:11;:9;:11::i;:::-;537:18;;485:73;:::o;346:112::-;381:6;394:59;;;;;;;;;;;;;;;;;;;;;;;;;346:112;:::o;562:92::-;623:28;642:8;623:18;:28::i;:::-;562:92;:::o;176:31::-;;;;:::o;513:70:2:-;557:7;575:5;;;;;;;;;;;568:12;;513:70;:::o;1069:172::-;890:5;;;;;;;;;;;876:19;;:10;:19;;;868:28;;;;;;;;1168:1;1148:22;;:8;:22;;;;1140:31;;;;;;;;1205:8;1177:37;;1198:5;;;;;;;;;;;1177:37;;;;;;;;;;;;1228:8;1220:5;;:16;;;;;;;;;;;;;;;;;;1069:172;:::o",
+  "source": "pragma solidity ^0.4.20;\n\nimport \"./Ownable.sol\";\n\ncontract HashCommit is Ownable {\n  constructor() public Ownable() { }\n\n  event Hash(bytes32 hash, bytes32 newMasterHash);\n\n  bytes32 public masterHash = 0x0;\n\n  function updateHash(bytes32 hash) onlyOwner public {\n    masterHash = sha3(hash, masterHash);\n    emit Hash(hash, masterHash);\n  }\n\n  function hashAlgo() public returns(string){\n    return '// js\\n web3.utils.soliditySha3(hash, masterHash);';\n  }\n\n  // Ownable interface\n  function getOwner() public view returns (address) { return _getOwner(); }\n\n  function transferOwnership(address newOwner) public { return _transferOwnership(newOwner); }\n\n}\n",
+  "sourcePath": "/home/nickgeoca/work2/ark-poc/contracts/HashCommit.sol",
+  "ast": {
+    "absolutePath": "/home/nickgeoca/work2/ark-poc/contracts/HashCommit.sol",
+    "exportedSymbols": {
+      "HashCommit": [
+        67
+      ]
+    },
+    "id": 68,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".20"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "/home/nickgeoca/work2/ark-poc/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 68,
+        "sourceUnit": 202,
+        "src": "26:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 201,
+              "src": "74:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$201",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "74:7:0"
+          }
+        ],
+        "contractDependencies": [
+          143,
+          201
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 67,
+        "linearizedBaseContracts": [
+          67,
+          201,
+          143
+        ],
+        "name": "HashCommit",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 9,
+              "nodeType": "Block",
+              "src": "117:3:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 10,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 7,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6,
+                  "name": "Ownable",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 201,
+                  "src": "107:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Ownable_$201_$",
+                    "typeString": "type(contract Ownable)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "107:9:0"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "97:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "117:0:0"
+            },
+            "scope": 67,
+            "src": "86:34:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 16,
+            "name": "Hash",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12,
+                  "indexed": false,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16,
+                  "src": "135:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14,
+                  "indexed": false,
+                  "name": "newMasterHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16,
+                  "src": "149:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "149:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "134:37:0"
+            },
+            "src": "124:48:0"
+          },
+          {
+            "constant": false,
+            "id": 19,
+            "name": "masterHash",
+            "nodeType": "VariableDeclaration",
+            "scope": 67,
+            "src": "176:31:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 17,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "176:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307830",
+              "id": 18,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "204:3:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0x0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 38,
+              "nodeType": "Block",
+              "src": "263:79:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 31,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 26,
+                      "name": "masterHash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "269:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 28,
+                          "name": "hash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21,
+                          "src": "287:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 29,
+                          "name": "masterHash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 19,
+                          "src": "293:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          },
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 27,
+                        "name": "sha3",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 331,
+                        "src": "282:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                          "typeString": "function () pure returns (bytes32)"
+                        }
+                      },
+                      "id": 30,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "282:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "269:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 32,
+                  "nodeType": "ExpressionStatement",
+                  "src": "269:35:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 34,
+                        "name": "hash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "320:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 35,
+                        "name": "masterHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19,
+                        "src": "326:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 33,
+                      "name": "Hash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 16,
+                      "src": "315:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$_t_bytes32_$returns$__$",
+                        "typeString": "function (bytes32,bytes32)"
+                      }
+                    },
+                    "id": 36,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "315:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 37,
+                  "nodeType": "EmitStatement",
+                  "src": "310:27:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 39,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 24,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 23,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 175,
+                  "src": "246:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "246:9:0"
+              }
+            ],
+            "name": "updateHash",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39,
+                  "src": "232:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "232:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "231:14:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "263:0:0"
+            },
+            "scope": 67,
+            "src": "212:130:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 46,
+              "nodeType": "Block",
+              "src": "388:70:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "2f2f206a730a20776562332e7574696c732e736f6c69646974795368613328686173682c206d617374657248617368293b",
+                    "id": 44,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "401:52:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_2218ff2438ff4bb46d5eeb41ea53553dd8e6b99edf5b60572514d6f1c7ca5886",
+                      "typeString": "literal_string \"// js\n web3.utils.soliditySha3(hash, masterHash);\""
+                    },
+                    "value": "// js\n web3.utils.soliditySha3(hash, masterHash);"
+                  },
+                  "functionReturnParameters": 43,
+                  "id": 45,
+                  "nodeType": "Return",
+                  "src": "394:59:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 47,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "hashAlgo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "363:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47,
+                  "src": "381:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "381:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "380:8:0"
+            },
+            "scope": 67,
+            "src": "346:112:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 55,
+              "nodeType": "Block",
+              "src": "535:23:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 52,
+                      "name": "_getOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 155,
+                      "src": "544:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                        "typeString": "function () view returns (address)"
+                      }
+                    },
+                    "id": 53,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "544:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 51,
+                  "id": 54,
+                  "nodeType": "Return",
+                  "src": "537:18:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 56,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 48,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "502:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 56,
+                  "src": "526:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 49,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "526:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "525:9:0"
+            },
+            "scope": 67,
+            "src": "485:73:0",
+            "stateMutability": "view",
+            "superFunction": 137,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 65,
+              "nodeType": "Block",
+              "src": "614:40:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 62,
+                        "name": "newOwner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58,
+                        "src": "642:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 61,
+                      "name": "_transferOwnership",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 200,
+                      "src": "623:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 63,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "623:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 60,
+                  "id": 64,
+                  "nodeType": "Return",
+                  "src": "616:35:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 66,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "transferOwnership",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 59,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58,
+                  "name": "newOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 66,
+                  "src": "589:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 57,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "589:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "588:18:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "614:0:0"
+            },
+            "scope": 67,
+            "src": "562:92:0",
+            "stateMutability": "nonpayable",
+            "superFunction": 142,
+            "visibility": "public"
+          }
+        ],
+        "scope": 68,
+        "src": "51:606:0"
+      }
+    ],
+    "src": "0:658:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/nickgeoca/work2/ark-poc/contracts/HashCommit.sol",
+    "exportedSymbols": {
+      "HashCommit": [
+        67
+      ]
+    },
+    "id": 68,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".20"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "/home/nickgeoca/work2/ark-poc/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 68,
+        "sourceUnit": 202,
+        "src": "26:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 201,
+              "src": "74:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$201",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "74:7:0"
+          }
+        ],
+        "contractDependencies": [
+          143,
+          201
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 67,
+        "linearizedBaseContracts": [
+          67,
+          201,
+          143
+        ],
+        "name": "HashCommit",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 9,
+              "nodeType": "Block",
+              "src": "117:3:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 10,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 7,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6,
+                  "name": "Ownable",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 201,
+                  "src": "107:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Ownable_$201_$",
+                    "typeString": "type(contract Ownable)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "107:9:0"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "97:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "117:0:0"
+            },
+            "scope": 67,
+            "src": "86:34:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 16,
+            "name": "Hash",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12,
+                  "indexed": false,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16,
+                  "src": "135:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14,
+                  "indexed": false,
+                  "name": "newMasterHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16,
+                  "src": "149:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "149:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "134:37:0"
+            },
+            "src": "124:48:0"
+          },
+          {
+            "constant": false,
+            "id": 19,
+            "name": "masterHash",
+            "nodeType": "VariableDeclaration",
+            "scope": 67,
+            "src": "176:31:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 17,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "176:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307830",
+              "id": 18,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "204:3:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0x0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 38,
+              "nodeType": "Block",
+              "src": "263:79:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 31,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 26,
+                      "name": "masterHash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "269:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 28,
+                          "name": "hash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21,
+                          "src": "287:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 29,
+                          "name": "masterHash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 19,
+                          "src": "293:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          },
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 27,
+                        "name": "sha3",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 331,
+                        "src": "282:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                          "typeString": "function () pure returns (bytes32)"
+                        }
+                      },
+                      "id": 30,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "282:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "269:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 32,
+                  "nodeType": "ExpressionStatement",
+                  "src": "269:35:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 34,
+                        "name": "hash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "320:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 35,
+                        "name": "masterHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19,
+                        "src": "326:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 33,
+                      "name": "Hash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 16,
+                      "src": "315:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$_t_bytes32_$returns$__$",
+                        "typeString": "function (bytes32,bytes32)"
+                      }
+                    },
+                    "id": 36,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "315:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 37,
+                  "nodeType": "EmitStatement",
+                  "src": "310:27:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 39,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 24,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 23,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 175,
+                  "src": "246:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "246:9:0"
+              }
+            ],
+            "name": "updateHash",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39,
+                  "src": "232:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "232:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "231:14:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "263:0:0"
+            },
+            "scope": 67,
+            "src": "212:130:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 46,
+              "nodeType": "Block",
+              "src": "388:70:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "2f2f206a730a20776562332e7574696c732e736f6c69646974795368613328686173682c206d617374657248617368293b",
+                    "id": 44,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "401:52:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_2218ff2438ff4bb46d5eeb41ea53553dd8e6b99edf5b60572514d6f1c7ca5886",
+                      "typeString": "literal_string \"// js\n web3.utils.soliditySha3(hash, masterHash);\""
+                    },
+                    "value": "// js\n web3.utils.soliditySha3(hash, masterHash);"
+                  },
+                  "functionReturnParameters": 43,
+                  "id": 45,
+                  "nodeType": "Return",
+                  "src": "394:59:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 47,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "hashAlgo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "363:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47,
+                  "src": "381:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "381:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "380:8:0"
+            },
+            "scope": 67,
+            "src": "346:112:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 55,
+              "nodeType": "Block",
+              "src": "535:23:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 52,
+                      "name": "_getOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 155,
+                      "src": "544:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                        "typeString": "function () view returns (address)"
+                      }
+                    },
+                    "id": 53,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "544:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 51,
+                  "id": 54,
+                  "nodeType": "Return",
+                  "src": "537:18:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 56,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 48,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "502:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 56,
+                  "src": "526:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 49,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "526:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "525:9:0"
+            },
+            "scope": 67,
+            "src": "485:73:0",
+            "stateMutability": "view",
+            "superFunction": 137,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 65,
+              "nodeType": "Block",
+              "src": "614:40:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 62,
+                        "name": "newOwner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58,
+                        "src": "642:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 61,
+                      "name": "_transferOwnership",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 200,
+                      "src": "623:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 63,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "623:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 60,
+                  "id": 64,
+                  "nodeType": "Return",
+                  "src": "616:35:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 66,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "transferOwnership",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 59,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58,
+                  "name": "newOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 66,
+                  "src": "589:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 57,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "589:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "588:18:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "614:0:0"
+            },
+            "scope": 67,
+            "src": "562:92:0",
+            "stateMutability": "nonpayable",
+            "superFunction": 142,
+            "visibility": "public"
+          }
+        ],
+        "scope": 68,
+        "src": "51:606:0"
+      }
+    ],
+    "src": "0:658:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x45A82A36518Bb2427C269601fFe5cec768f5De6d",
+      "transactionHash": "0x6fa6b94b5eea016e8dfc345da65f86466160f0b019d4852740c95232a0cbd069"
+    }
+  },
+  "schemaVersion": "3.0.0-beta.0",
+  "updatedAt": "2018-10-17T18:30:52.238Z"
+}

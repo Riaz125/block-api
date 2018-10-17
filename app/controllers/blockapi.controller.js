@@ -1,37 +1,42 @@
 const web3 = require('web3');
-const Blockapi = require('../models/blockapi.model.js');
+const HashCommit = require('HashCommit');
 
-const createName = (req, res, first, last) => {
-  const params_hash = web3.utils.soliditySha3('first', 'last');
-  const name = new Blockapi({
-      first: first || "First Name Missing",
-      last: last
+let ethContract;
+HashCommit.deployed().then(c => {ethContract = c;});
 
 
-  });
+const entry1_getJsonAndHash = (req, res) => {
+  let first = req.body.first;
+  let last = req.body.last;
 
-  // Save Note in the database
-  name.save()
-  .then(data => {
-      res.send({hash: params_hash, data: data});
-      console.log({hash: params_hash, data: data});
-  }).catch(err => {
-      res.status(500).send({
-          message: err.message || "Some error occurred while inputing Name."
-      });
-  });
+  const hashVal = web3.utils.soliditySha3(first, last);
+  
+  const json = 
+    { first: first
+    , last: last
+    , _hashVal: hashVal
+    };
+
+  return json;
 }
 
+function updateEthHash(hash) {
+  return ethContract.updateHash(hash).then(tx => { return tx; });
+}
+
+exports.createNameByPost = (req, res) => console.log(req.query);
+
 exports.unhashed = function(req, res) {
+  json = entry1_getJsonAndHash(req, res);
+  // updateEthHash(json._hashVal).then(tx=>console.log(tx));
 
-    // Access the provided 'page' and 'limt' query parameters
-    let first = req.query.first;
-    let last = req.query.last;
-
-    createName(req, res, first, last);
-
+  // todo
+  // use ipfs hash
+  // put on ipfs
+  // less frequenet hashing
+  // error handling if tx fails
 };
-
+/*
 exports.createNameByPost = function(req, res) {
   if(!req.body.first || !req.body.last) {
       return res.status(400).send({
@@ -43,4 +48,5 @@ exports.createNameByPost = function(req, res) {
 
   // Save Note in the database
   createName(req, res, first, last);
-  };
+};
+*/

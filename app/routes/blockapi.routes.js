@@ -5,5 +5,5 @@ module.exports = (app) => {
 
     app.post('/hashed', blockapi.createNameByPost);
 
-    app.post('/mixed', )
+    // app.post('/mixed', )
 }

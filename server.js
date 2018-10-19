@@ -12,11 +12,10 @@ app.use(bodyParser.json())
 
 // Configuring the database
 const dbConfig = require('./config/database.config.js');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-//mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
-/* 
 // Connecting to the database
 mongoose.connect(dbConfig.url, {
 	useNewUrlParser: true
@@ -26,7 +25,6 @@ mongoose.connect(dbConfig.url, {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 });
-*/
 
 // define a simple route
 app.get('/', (req, res) => {

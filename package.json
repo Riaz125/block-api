@@ -9,7 +9,9 @@
   "keywords": [
     "Express",
     "RestAPI",
-    "Notes"
+    "Notes",
+    "MongoDB",
+    "Mongoose"
   ],
   "author": "callicoder",
   "license": "MIT",

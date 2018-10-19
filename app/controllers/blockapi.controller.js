@@ -1,3 +1,5 @@
+const Blockapi = require('../models/blockapi.model.js');
+
 const arkadiaAddress = '0x667deb5a98f77052cf561658575cf1530ee42c7a';
 const LIVE_NET = false;
 
@@ -34,14 +36,32 @@ const entry1_getJsonAndHash = (req, res) => {
   let last = req.body.last;
 
   const hashVal = web3.utils.soliditySha3(first, last);
-  
-  const json = 
-    { first: first
-    , last: last
-    , _hashVal: hashVal
-    };
 
-  return json;
+  return { first: first
+         , last: last
+         , _hashVal: hashVal
+         };
+}
+
+const entry1_saveToMongoDb = (req, res) => {
+  let first = req.body.first;
+  let last = req.body.last;
+
+  const name = new Blockapi({
+      first: first || "First Name Missing",
+      last: last
+  }
+
+  name.save()
+  .then(data => {
+      res.send({hash: params_hash, data: data});
+      console.log({hash: params_hash, data: data});
+  }).catch(err => {
+      res.status(500).send({
+          message: err.message || "Some error occurred while inputing Name."
+      });
+  });
+
 }
 
 // **************************************************
@@ -49,8 +69,10 @@ const entry1_getJsonAndHash = (req, res) => {
 exports.createNameByPost = (req, res) => console.log(req.query);
 
 exports.unhashed = function(req, res) {
+
+  entry1_saveToMongoDb(req, res);
   json = entry1_getJsonAndHash(req, res);
-  
+
   eth_updateHash(json._hashVal.toString()).then(i=>{
     return eth_getMasterHash(i);
   }).then(console.log);
